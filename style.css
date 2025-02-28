@@ -90,7 +90,7 @@ ytd-rich-metadata-renderer {
   color: white;
 }
 .yt-core-attributed-string--link-inherit-color .yt-core-attributed-string__link--call-to-action-color {
-  color: #b3162e;
+  color: #ffffff;
 }
 a.yt-simple-endpoint.yt-formatted-string:hover {
   color: white;
@@ -403,7 +403,7 @@ yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpo
 }
 
 .ytSuggestionComponentRightContainer {
-  background: #00000040;
+  background: transparent !important;
   padding: 3px 8px 3px 8px;
   font-weight: bold;
 }
@@ -515,9 +515,10 @@ ytd-engagement-panel-section-list-renderer[modern-panels]:not([live-chat-engagem
   border: 2px solid #151515;
 }
 #subheader.ytd-engagement-panel-title-header-renderer:not(:empty) {
-  background-color: #be122c91;
+  background-color: #101010;
   border-radius: unset;
   border-top: 2px solid rgb(187 187 187 / 93%);
+  border-top: unset !important;
 }
 .ytChipShapeActive {
   border-radius: unset;
@@ -532,8 +533,11 @@ ytd-macro-markers-list-item-renderer[active] #time.ytd-macro-markers-list-item-r
 }
 #time.ytd-macro-markers-list-item-renderer {
   color: #e4d7d9cf;
-  background-color: #be122c91;
+  background-color: #be122c;
   border-radius: unset;
+}
+ytd-macro-markers-list-item-renderer[modern][layout="MACRO_MARKERS_LIST_ITEM_RENDERER_LAYOUT_VERTICAL"]:not([carousel-type="MACRO_MARKERS_LIST_ITEM_RENDERER_CAROUSEL_TYPE_TEXT_ONLY"])[active] #thumbnail.ytd-macro-markers-list-item-renderer {
+  border: 2px solid #be122c;
 }
 ytd-macro-markers-list-item-renderer:hover,
 ytd-macro-markers-list-item-renderer[active] {
@@ -861,4 +865,44 @@ yt-reaction-control-panel-view-model[modernized]:not([reaction-control-panel-exp
 
 .ytp-play-progress {
   background: linear-gradient(to right, #a10c2b 80%, #8e062c 100%) !important;
+}
+ytd-feed-nudge-renderer[nudge-style="modernized-nudge"] #content-wrapper.ytd-feed-nudge-renderer {
+  background-color: #0c0c0c;
+}
+#dismissible.ytd-feed-nudge-renderer {
+  border: 2px solid rgb(0 0 0 / 20%);
+}
+.yt-spec-button-shape-next--overlay.yt-spec-button-shape-next--outline {
+  border-color: rgb(0 0 0 / 30%);
+}
+ytd-horizontal-card-list-renderer[modern-chapters][card-list-style="HORIZONTAL_CARD_LIST_STYLE_TYPE_ENGAGEMENT_PANEL_SECTION"] #items.ytd-horizontal-card-list-renderer::before {
+  background-color: #b7b7b7;
+}
+#tabs-divider.ytd-tabbed-page-header {
+  border-bottom: 1px solid rgb(0 0 0 / 0%);
+}
+ytd-rich-shelf-renderer:not([hide-bottom-divider]) #dismissible.ytd-rich-shelf-renderer {
+  border-bottom: 2px solid rgb(229 17 27 / 20%);
+}
+ytd-exploratory-results-renderer.ytd-item-section-renderer,
+ytd-horizontal-card-list-renderer.ytd-item-section-renderer:not(:first-child),
+ytd-reel-shelf-renderer.ytd-item-section-renderer,
+ytd-shelf-renderer.ytd-item-section-renderer {
+  border-top: 2px solid rgb(67 67 67 / 20%);
+}
+ytd-transcript-segment-list-renderer {
+  background-color: #121212;
+}
+.segment-timestamp.ytd-transcript-segment-renderer {
+  color: #ffebee;
+  background-color: #be122c;
+}
+ytd-transcript-footer-renderer {
+  background-color: #101010;
+}
+ytd-exploratory-results-renderer.ytd-item-section-renderer,
+ytd-horizontal-card-list-renderer.ytd-item-section-renderer:not(:first-child),
+ytd-reel-shelf-renderer.ytd-item-section-renderer,
+ytd-shelf-renderer.ytd-item-section-renderer {
+  border-bottom: 2px solid rgb(67 67 67 / 20%);
 }
